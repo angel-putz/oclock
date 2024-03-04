@@ -10,6 +10,5 @@
     <button onclick="window.location.href='chronometre.php'">chronometre</button>
     <button onclick="window.location.href='horloge.php'">horloge</button>
     <button onclick="window.location.href='alarme.php'">alarme</button>
-
 </body>
 </html>

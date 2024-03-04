@@ -3,14 +3,6 @@ $(document).ready(function() {
 
     let nbtours = 0;    
 
-    $('#stop').click(function() {
-        stopInterval(intervalId);
-    });  
-    
-    $('#resume').click(function() {
-        resumeInterval(intervalId);
-    });
-
     $("#reset").click(function() {
         location.reload();
     });

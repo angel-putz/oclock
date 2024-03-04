@@ -6,7 +6,8 @@ $(document).ready(function() {
 
         let formHeures = parseInt($('#heure').val());
         let formMinutes = parseInt($('#minutes').val());
-        let Audio = new Audio('alarme.mp3');
+        let message = $('#message').val();
+        //let Audio = new Audio('alarme.mp3');
 
         if (formHeures < 0 || formHeures > 23 || formMinutes < 0 || formMinutes > 59) {
             alert('Veuillez entrer une heure valide');
@@ -18,9 +19,9 @@ $(document).ready(function() {
 
         intervalId = setInterval(function() {
             if (formMinutes == new Date().getMinutes() && formHeures == new Date().getHours()) {
-                alert('Réveil');
+                alert(message);
                 clearInterval(intervalId);
-                Audio.play();
+                //Audio.play();
             }
 
 

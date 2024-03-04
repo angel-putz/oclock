@@ -12,8 +12,6 @@
     <div id="chronometre"></div>
     <button id="tour">tour</button>
     <button id="start">start</button>
-    <button id="stop">stop</button>
-    <button id="resume">resume</button>
     <button id="reset">reset</button>
 
     <div id="tours"><br></div>

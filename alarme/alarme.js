@@ -14,26 +14,17 @@ $(alarme.php).ready(function() {
             return;
         }
 
-
-
-
-
-
-
-
         intervalId = setInterval(function() {
             if (formMinutes == new Date().getMinutes() && formHeures == new Date().getHours()) {
+                $('#alarme').html('');
                 audio.play();
                 alert(message);
                 clearInterval(intervalId);
-                $("#alarmePasse").append('<li>' + formHeures + "h" + ' : ' + formMinutes + "min" + '</li>'+ " alarme passée");
-                $('#alarme').html(" ");
+                $("#alarmePasse").append('<li>' + formHeures + " h" + ' : ' + formMinutes + " min" + " alarme passée" + '</li>');
+
             }else {
                 $('#alarme').html("Votre reveil sonnera a " +  formHeures + "h" + ' : ' + formMinutes + "min" );
             }
-
-
-
 
 
         });

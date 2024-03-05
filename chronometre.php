@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link src="chronometre.css">
+    <link rel="stylesheet" href="chronometre.css">
     <title>Document</title>
 </head>
 <body>
@@ -11,10 +11,11 @@
 
     <div id="chronometre"></div>
     <button id="tour">tour</button>
+    <div id="tours"><br></div>
     <button id="start">start</button>
     <button id="reset">reset</button>
 
-    <div id="tours"><br></div>
+
 
 
     <button onclick="window.location.href='index.php'">Retour</button>

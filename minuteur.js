@@ -11,21 +11,30 @@ $(document).ready(function() {
         let secondes = parseInt($('#secondes').val());
         let total = minutes * 60 + secondes;
 
+
+
         intervalId = setInterval(function() {
-            if (total <= 0) {
-                alert('Fin du minuteur');
-                clearInterval(intervalId);
-            } else {
-                if (secondes == 0) {
-                    minutes = minutes - 1;
-                    secondes = 59;
+
+            if (minutes <= 0 || secondes <= 0 || secondes == NaN || minutes == NaN) {
+                alert('Veuillez entrer une valeur valide');
+                return;
+            }
+                else if (total <= 0) {
+                    alert('Fin du minuteur');
+                    clearInterval(intervalId);
                 } else {
-                    secondes = secondes - 1;
-                }
-                total = total - 1;
-                console.log(total);
+                    if (secondes == 0) {
+                        minutes = minutes - 1;
+                        secondes = 59;
+                    } else {
+                        secondes = secondes - 1;
+                    }
+                    total = total - 1;
+                    console.log(total);
             }
             $('#minuteur').html(minutes + ' : ' + secondes + ' restantes');
+
+        
         }, 1000);
     });
 });

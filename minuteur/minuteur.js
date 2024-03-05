@@ -2,7 +2,7 @@ $(document).ready(function() {
     let intervalId;
     let resumeIntervalId;
 
-
+    let audio = new Audio('minuteur.wav');
     
 
 
@@ -17,6 +17,7 @@ $(document).ready(function() {
 
         intervalId = setInterval(function() {
                 if (total <= 0) {
+                    audio.play();
                     alert('Fin du minuteur');
                     clearInterval(intervalId);
                 } else {
@@ -43,6 +44,7 @@ $(document).ready(function() {
         $('#resume').click(function() {
             resumeIntervalId = setInterval(function() {
                 if (total <= 0) {
+                    audio.play();
                     alert('Fin du minuteur');
                     clearInterval(resumeIntervalId);
                 } else {

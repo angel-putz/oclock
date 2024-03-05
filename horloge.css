@@ -1,30 +1,35 @@
-button {
-    background-color: #f44336;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 50%;
-    margin: auto;
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-#horloge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
-    text-align: center;
+    margin-bottom: 50px;
+}
+
+#horloge {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #007BFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
 }

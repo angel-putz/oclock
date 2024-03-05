@@ -15,8 +15,9 @@
     </form>
     <div id="minuteur"></div>
     <button id="pause">pause</button> <br>
+    <button id="resume">resume</button> <br>
 
-    <button onclick="window.location.href='index.php'">Retour</button>
+    <button onclick="window.location.href='../index.php'">Retour</button>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

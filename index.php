@@ -11,9 +11,9 @@
     <h1>Choisissez un outil</h1>
 
 
-    <button onclick="window.location.href='minuteur.php'">minuteur</button>
-    <button onclick="window.location.href='chronometre.php'">chronometre</button>
-    <button onclick="window.location.href='horloge.php'">horloge</button>
+    <button onclick="window.location.href='minuteur.php'">minuteur</button> <br>
+    <button onclick="window.location.href='chronometre.php'">chronometre</button> <br>
+    <button onclick="window.location.href='horloge.php'">horloge</button> <br>
     <button onclick="window.location.href='alarme.php'">alarme</button>
 </body>
 </html>

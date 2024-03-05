@@ -14,7 +14,7 @@
         <input type="submit" value="lancer">
     </form>
     <div id="minuteur"></div>
-    <button id="pause">pause</button>
+    <button id="pause">pause</button> <br>
 
     <button onclick="window.location.href='index.php'">Retour</button>
 

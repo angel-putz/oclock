@@ -11,7 +11,7 @@
 <h1>Horloge</h1>
 <div id="horloge"></div>
 
-<button id="start">start</button>
+<button id="start">start</button> <br>
 
 <button onclick="window.location.href='index.php'">Retour</button>
 

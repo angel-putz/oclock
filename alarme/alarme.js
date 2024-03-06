@@ -1,7 +1,47 @@
 $(alarme.php).ready(function() {
 
     let intervalId;
-    $("form").submit(function(e) {
+    let intervalIdAjout;
+
+        $("#alarme_2").submit(function(e) {
+            e.preventDefault();
+            let formAjoutHeures = parseInt($('#heureAjout').val());
+            let formAjoutMinutes = parseInt($('#minutesAjout').val());
+            let Ajoutmessage = $('#messageAjout').val();
+            let audio = new Audio('alarme.wav');
+
+
+            if (formAjoutHeures < 0 || formAjoutHeures > 23 || formAjoutMinutes < 0 || formAjoutMinutes > 59) {
+                alert('Veuillez entrer une heure valide');
+                return;
+            } 
+            
+            intervalIdAjout = setInterval(function() {
+            if (formAjoutHeures == new Date().getHours() && formAjoutMinutes < new Date().getMinutes()){
+                alert(Ajoutmessage);
+                audio.play();
+                $("#alarmePasse").append('<li>' + formAjoutHeures + "h" + ' : ' + formAjoutMinutes + "min" + '</li>'+ " alarme passée");
+            }
+            else {
+                $('#nouvelleAlarme').html("Votre reveil sonnera a " +  formAjoutHeures + "h" + ' : ' + formAjoutMinutes + "min" );
+            }
+        });
+    });
+
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+    $("#alarme_1").submit(function(e) {
         e.preventDefault();
 
         let formHeures = parseInt($('#heure').val());
@@ -25,24 +65,6 @@ $(alarme.php).ready(function() {
             }else {
                 $('#alarme').html("Votre reveil sonnera a " +  formHeures + "h" + ' : ' + formMinutes + "min" );
             }
-
-
         });
 
-        $("#Ajout").submit(function(e) {
-            e.preventDefault();
-            let formAjoutHeures = parseInt($('#heureAjout').val());
-            let formAjoutMinutes = parseInt($('#minutesAjout').val());
-            let Ajoutmessage = $('#messageAjout').val();
-            let audio = new Audio('alarme.wav');
-            if (formAjoutHeures < 0 || formAjoutHeures > 23 || formAjoutMinutes < 0 || formAJoutMinutes > 59) {
-                alert('Veuillez entrer une heure valide');
-                return;
-            } else if (formAjoutHeures == new Date().getHours() && formAjoutMinutes < new Date().getMinutes()){
-                alert(Ajoutmessage);
-                $("#alarmepasse").append('<li>' + formAjoutHeures + "h" + ' : ' + formAjoutMinutes + "min" + '</li>'+ " alarme passée");
-
-            }
-    });
-});
 });

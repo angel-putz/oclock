@@ -1,7 +1,7 @@
 $(document).ready(function() {
     let intervalId;
 
-    let nbtours = 0;    
+    let nbtours = 1;    
 
     $("#reset").click(function() {
         location.reload();

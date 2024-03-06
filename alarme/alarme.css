@@ -40,8 +40,8 @@ input[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-#alarme {
-    font-size: 48px;
+#alarme, #nouvelleAlarme, #alarmePasse {
+    font-size: 24px;
     margin-bottom: 50px;
 }
 

@@ -8,22 +8,25 @@
 </head>
 <body>
 <h1>Alarme</h1>
-<form action="alarme.php" method="post">
+<form action="alarme.php" method="post" id="alarme_1">
     <input type="number" name="heure" id="heure" placeholder="heure">
     <input type="number" name="minutes" id="minutes" placeholder="minutes">
     <input type="text" name="message" id="message" placeholder="message">
     <input type="submit" value="lancer">
 </form>
-<!--
+
 <p> Pour ajouter une alarme, veuillez renseigner l'heure, les minutes et le message de l'alarme.</p>
-<form action="alarme.php" method="post" id="Ajout">
+<form action="alarme.php" method="post" id="alarme_2">
     <input type="number" name="heure" id="heureAjout" placeholder="heure">
     <input type="number" name="minutes" id="minutesAjout" placeholder="minutes">
     <input type="text" name="message" id="messageAjout" placeholder="message">
     <input type="submit" value="lancer">
--->
+</form>
+
 <p>Alarmes :</p>
 <div id="alarme"></div>
+<p>Nouvelle alarme :</p>
+<div id="nouvelleAlarme"><br></div>
 <p>Alarme passé :</p>
 <div id="alarmePasse"></div>
 <button onclick="window.location.href='../index.php'">Retour</button>
